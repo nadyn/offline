@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 19</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_GcvSmseVpGc7wLyQrmV3Q');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_y0drvpo', 'template_0n7x2m7', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h1 class="ce">Superhero request form</h1>
+    <h1 align="center">What do you need help with?</h1>
+
+
+    <div class="container">
+        <ul class="ks-cboxtags">
+            <div class="line1">
+                <li><input type="checkbox" id="checkboxOne" value="DEFEAT A VILLAIN"><label for="checkboxOne">DEFEAT A
+                        VILLAIN</label></li>
+                <li><input type="checkbox" id="checkboxTwo" value="SAVE A CIVILIAN" checked><label
+                        for="checkboxTwo">SAVE A
+                        CIVILIAN</label></li>
+                <li><input type="checkbox" id="checkboxThree" value="STOP A ROBBERY" checked><label
+                        for="checkboxThree">STOP
+                        A ROBBERY</label></li>
+            </div>
+
+            <div class="line2">
+                <li><input type="checkbox" id="checkboxFour" value="PREVENT AN APOCALYPSE"><label
+                        for="checkboxFour">PREVENT
+                        AN APOCALYPSE</label></li>
+                <li><input type="checkbox" id="checkboxFive" value="TRAIN A SIDEKICK"><label for="checkboxFive">TRAIN A
+                        SIDEKICK</label></li>
+            </div>
+
+            <div class="line3">
+                <li><input type="checkbox" id="checkboxSix" value="OTHER STUFF" checked><label for="checkboxSix">OTHER
+                        STUFF</label></li>
+            </div>
+        </ul>
+    </div>
+
+    <div>
+        <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <input class="job" placeholder="Job details" name="from_Job details">
+            <input class="n-e" placeholder="Name"name="from_name"> 
+            <input class="n-e" placeholder="Email" name="from_email">
+
+            <input type="submit" class="button" value="SEND">
+        </form>
+    </div> 
+</body>
+
+</html>

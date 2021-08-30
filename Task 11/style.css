@@ -1,0 +1,88 @@
+.weather_wrapper {
+    width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 150px;
+    height: 200px;
+    margin: 0 10px;
+}
+.card:hover{
+    -webkit-box-shadow: 0px 0px 14px 9px rgba(25,146,255,0.85); 
+    box-shadow: 0px 0px 14px 9px rgba(25,146,255,0.85);
+    /*https://html-css-js.com/css/generator/box-shadow/*/
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+.header{
+    text-align: center;
+    color: cornsilk;
+    background-color: #3ab0d4;
+}
+.footer{
+    font-size:150%;
+    text-align: center;
+}
+/*.match {
+  position: relative;
+  width: 20%;
+  padding-top: 20%;
+  margin-top: 5%;
+  transform: rotate(0deg) scale(1, 1.1);
+}
+
+.fire {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: linear-gradient(45deg, #ffb105, #ff0e01);
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(-45deg) scale(1, 1);
+  box-shadow: 0 0 10px 5px rgba(139, 0, 0, 0.3);
+}
+
+.stick {
+  z-index: 2;
+  position: absolute;
+  width: 9%;
+  padding-top: 100%;
+  bottom: -90%;
+  left: 45%;
+  background: linear-gradient(to right, #8c4816, #f0a15f);
+  border: 0.1vw solid #c2573e;
+}
+
+.stick::before {
+  content: "";
+  display: block;
+  z-index: 3;
+  position: absolute;
+  left: -48%;
+  top: -10%;
+  width: 200%;
+  height: 22%;
+  background: #4d260f;
+  border-radius: 50%;
+}
+
+.stick::after {
+  content: "";
+  display: block;
+  z-index: 3;
+  position: absolute;
+  left: -68%;
+  top: -14%;
+  width: 240%;
+  height: 22%;
+  background: #f4f3f3;
+  background: linear-gradient(to bottom, #fff, #fff 10%, transparent);
+  filter: blur(0.5vw);
+  border-radius: 50%;
+}
